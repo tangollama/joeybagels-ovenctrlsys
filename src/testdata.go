@@ -1,4 +1,4 @@
-package ovenctlsys
+package main
 
 import (
 	"math/rand"
@@ -32,8 +32,8 @@ func Simulate() (output string) {
 	return output
 }
 
-func main() {
+/*func main() {
 	v := Simulate()
 	fmt.Println(v)
-}
+}*/
 

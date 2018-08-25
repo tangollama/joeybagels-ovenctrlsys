@@ -9,7 +9,6 @@ import (
 	"github.com/newrelic/infra-integrations-sdk/data/metric"
 	"github.com/newrelic/infra-integrations-sdk/integration"
 	"github.com/newrelic/infra-integrations-sdk/log"
-	"testdata"
 )
 
 type argumentList struct {
@@ -26,8 +25,8 @@ var (
 )
 
 func main() {
-	var data ovenctlsys.Status
-	byt := []byte(ovenctlsys.Simulate())
+	var data Status
+	byt := []byte(Simulate())
 	if err := json.Unmarshal(byt, &data); err != nil {
 		//fmt.Println("There was an error:", err)
 		log.Error(err.Error())
