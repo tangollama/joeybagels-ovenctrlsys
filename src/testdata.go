@@ -6,7 +6,7 @@ import (
 	"fmt"
 )
 /*
-Simulating a JSON object in the following form
+Simulate() returns a JSON object in the following form
 
 {
 	"temp": 450,		//temperature of the oven
