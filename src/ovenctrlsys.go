@@ -42,7 +42,7 @@ func main() {
 	}
 
 	// Create Entity, entities name must be unique
-	e1, err := i.Entity("ovenctrlsys", "custom")
+	e1, err := i.Entity("OvenCtrlSys", "custom")
 	if err != nil {
 		log.Error(err.Error())
 		os.Exit(1)
@@ -50,7 +50,7 @@ func main() {
 
 	// Add Event
 	if data.Restart == true {
-		err = e1.AddEvent(event.NewNotification("restart"))
+		err = e1.AddEvent(event.NewNotification("OvenCtrlSys-Restart"))
 		if err != nil {
 			log.Error(err.Error())
 		}
@@ -58,7 +58,7 @@ func main() {
 
 	// Add Inventory item
 	if data.Version != "" {
-		err = e1.SetInventoryItem("ctrlsys", "version", data.Version)
+		err = e1.SetInventoryItem("OvenCtrlSys", "version", data.Version)
 		if err != nil {
 			log.Error(err.Error())
 		}
@@ -66,7 +66,7 @@ func main() {
 
 	// Add Metric
 	if data.Temp > -1 {
-		m1 := e1.NewMetricSet("ctrlsys")
+		m1 := e1.NewMetricSet("OvenCtrlSys")
 		err = m1.SetMetric("temp", data.Temp, metric.GAUGE)
 		if err != nil {
 			log.Error(err.Error())

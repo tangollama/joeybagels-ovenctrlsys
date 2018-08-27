@@ -14,21 +14,21 @@ os: linux
 commands:
   all_data:
     command:
-      - ./bin/jb-ovenctrlsys
+      - ovenctrlsys
     interval: 15
   metrics:
     command:
-      - ./bin/jb-ovenctrlsys
+      - ovenctrlsys
       - --metrics
     interval: 15
   inventory:
     command:
-      - ./bin/jb-ovenctrlsys
+      - ovenctrlsys
       - --inventory
     prefix: config/jb-ovenctrlsys
     interval: 15
   events:
     command:
-    - ./bin/jb-ovenctrlsys
+    - ovenctrlsys
     - --events
     interval: 15
