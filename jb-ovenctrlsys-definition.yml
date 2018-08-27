@@ -10,25 +10,26 @@ name: com.joeybagels.ovenctrlsys
 description: Reports status and metrics for ovenctrlsys service
 protocol_version: 1
 os: linux
+arch: amd64
 
 commands:
   all_data:
     command:
-      - ovenctrlsys
+      - jb-ovenctrlsys
     interval: 15
-  metrics:
-    command:
-      - ovenctrlsys
-      - --metrics
-    interval: 15
-  inventory:
-    command:
-      - ovenctrlsys
-      - --inventory
-    prefix: config/jb-ovenctrlsys
-    interval: 15
-  events:
-    command:
-    - ovenctrlsys
-    - --events
-    interval: 15
+#  metrics:
+#    command:
+#      - ovenctrlsys
+#      - --metrics
+#    interval: 15
+#  inventory:
+#    command:
+#      - ovenctrlsys
+#      - --inventory
+#    prefix: config/jb-ovenctrlsys
+#    interval: 15
+#  events:
+#    command:
+#    - ovenctrlsys
+#    - --events
+#    interval: 15
