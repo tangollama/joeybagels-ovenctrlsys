@@ -42,7 +42,7 @@ func main() {
 	}
 
 	// Create Entity, entities name must be unique
-	e1, err := i.Entity("overctrlsys", "custom")
+	e1, err := i.Entity("ovenctrlsys", "custom")
 	if err != nil {
 		log.Error(err.Error())
 		os.Exit(1)
