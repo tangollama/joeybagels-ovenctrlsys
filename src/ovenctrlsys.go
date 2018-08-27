@@ -50,7 +50,7 @@ func main() {
 
 	// Add Event
 	if data.Restart == true {
-		err = e1.AddEvent(event.NewNotification("OvenCtrlSys-Restart"))
+		err = e1.AddEvent(event.NewNotification("OvenCtrlSysRestart"))
 		if err != nil {
 			log.Error(err.Error())
 		}
@@ -58,7 +58,7 @@ func main() {
 
 	// Add Inventory item
 	if data.Version != "" {
-		err = e1.SetInventoryItem("OvenCtrlSys", "version", data.Version)
+		err = e1.SetInventoryItem("OvenCtrlSysSoftware", "version", data.Version)
 		if err != nil {
 			log.Error(err.Error())
 		}
@@ -66,7 +66,7 @@ func main() {
 
 	// Add Metric
 	if data.Temp > -1 {
-		m1 := e1.NewMetricSet("OvenCtrlSys")
+		m1 := e1.NewMetricSet("OvenCtrlSysMetrics")
 		err = m1.SetMetric("temp", data.Temp, metric.GAUGE)
 		if err != nil {
 			log.Error(err.Error())
