@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "license_key: [Your license key]" | sudo tee -a /etc/newrelic-infra.yml
+#echo "log_file: /var/log/newrelic-infra.log"  | sudo tee -a /etc/newrelic-infra.yml
+#echo "display_name: [your preferred host display name]" | sudo tee -a /etc/newrelic-infra.yml
+
+sudo curl -o /etc/yum.repos.d/newrelic-infra.repo https://download.newrelic.com/infrastructure_agent/linux/yum/el/6/x86_64/newrelic-infra.repo
+sudo yum -q makecache -y --disablerepo='*' --enablerepo='newrelic-infra'
+sudo yum install newrelic-infra -y
