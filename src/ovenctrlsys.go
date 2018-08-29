@@ -50,7 +50,7 @@ func main() {
 
 	// Add Event
 	if data.Restart == true {
-		err = e1.AddEvent(event.New("restart", "status"))
+		err = e1.AddEvent(event.NewNotification("ovenctrlsys-restart"))
 		if err != nil {
 			log.Error(err.Error())
 		}
@@ -58,7 +58,7 @@ func main() {
 
 	// Add Inventory item
 	if data.Version != "" {
-		err = e1.SetInventoryItem("instance", "version", data.Version)
+		err = e1.SetInventoryItem("ovenctrlsys", "version", data.Version)
 		if err != nil {
 			log.Error(err.Error())
 		}
