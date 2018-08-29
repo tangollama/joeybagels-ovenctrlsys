@@ -50,7 +50,7 @@ func main() {
 
 	// Add Event
 	if data.Restart == true {
-		err = e1.AddEvent(event.NewNotification("OvenCtrlSysRestart"))
+		err = e1.AddEvent(event.New("restart", "status"))
 		if err != nil {
 			log.Error(err.Error())
 		}
@@ -58,7 +58,7 @@ func main() {
 
 	// Add Inventory item
 	if data.Version != "" {
-		err = e1.SetInventoryItem("OvenCtrlSysSoftware", "version", data.Version)
+		err = e1.SetInventoryItem("instance", "version", data.Version)
 		if err != nil {
 			log.Error(err.Error())
 		}
