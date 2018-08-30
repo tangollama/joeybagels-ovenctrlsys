@@ -30,3 +30,8 @@ Assuming, you can execute `./bin/jb-overctrlsys` on your target environment (if 
 * Supported OS: Amazon Linux 2
 * ovenctrlsys versions: 0.1.0
 * Edition: Example
+
+# Development
+This example was generated using the [nr-integrations-builder](https://github.com/newrelic/nr-integrations-builder).
+
+`nr-integrations-builder init -n "joeybagels" -c "jb" ovenctrlsys`
