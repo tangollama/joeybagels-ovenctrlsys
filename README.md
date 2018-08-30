@@ -1,6 +1,6 @@
 # New Relic Infrastructure Integration for ovenctrlsys
 
-Reports status and metrics for ovenctrlsys service
+Reports status and metrics for a fictional ovenctrlsys service for an equally fictional New Jersey style deli and bagel chain. This project was generated in support of the screencast content on [developer.newrelic.com](http://developer.newrelic.com)
 
 ## Requirements
 These instructions assumes that one is deploying the code to a Linux-based VM (specifically Amazon Linux 2). If you've not deployed the New Relic Infrastructure agent to an EC2 instance, look to [this post](https://blog.newrelic.com/product-news/installing-infrastructure-agent-aws/) for simple instructions. It also assumes development on Mac OSX. Both of these "requirements" can easily be modified for your environment, but I'm writing the instructions for my setup. 
